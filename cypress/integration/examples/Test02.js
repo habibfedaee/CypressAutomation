@@ -1,15 +1,22 @@
-/// <reference types= "Cypress" />
+/// <reference types="Cypress" />
 
-const { groupBy } = require("cypress/types/lodash");
-
-describe("My first Test suite", function () {
+describe("My second test suite", function () {
   it("my first test case", function () {
     cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
-    // to type into the following field
+    cy.wait(3000);
     cy.get(".search-keyword").type("ca");
-    // add wait
-    cy.wait("2000");
-    // selenium get hit url in browser, cypress get acts like findElement of selenium
-    cy.get(".product").should("have.length", 5);
+    cy.wait(2000);
+    // cy.get like drive.findElement in selenium
+    // parent child chaining:
+    cy.get(".products").as("productLocator");
+    cy.get("@productLocator")
+      .find(".product")
+      .each(($e1, index, list) => {
+        const textVeg = $e1.find("h4.product-name").text();
+        if (textVeg.includes("Cashews")) {
+          $e1.find("button").click();
+        }
+      });
+    cy.get(".cart-icon > img").click();
   });
 });
