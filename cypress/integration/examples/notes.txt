@@ -1,0 +1,21 @@
+cypress automation :
+
+test-file.js structure :
+
+ /// < reference types="Cypress" />
+
+ describe('test suite description', function(){
+    it('test case desc', function(){
+        cy.visit('url');
+        // step by step testing 
+    })
+    // a test file can have multitple it(s)
+ })
+
+
+commands :
+
+cy.visit('url');
+cy.get('locator').click();
+cy.get('locator').should('include', 'text');
+cy.get('locator').

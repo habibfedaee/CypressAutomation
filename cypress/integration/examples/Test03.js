@@ -3,7 +3,7 @@
 describe("My third test suite", function () {
   it("my first test case", function () {
     // checkboxes:
-    cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
+    cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
     cy.get("#checkBoxOption1")
       .check()
       .should("be.checked")
