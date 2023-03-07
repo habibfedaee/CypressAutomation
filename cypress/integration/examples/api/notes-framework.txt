@@ -1,0 +1,16 @@
+Best practicing in building cypress framework
+
+ - setting up test hooks
+ - data driven testing with fixtures
+ - building custom cypress commands
+ - parametarizing test with multiple data sets
+ - understand the test debugging 
+ - build page object design pattern for objects
+ - configuration changes in cypress.json
+ - screenshots and video recording for test
+ - exploring cypress dashboard
+ - understand the environmental variables of cypress
+ - generate excellent reports for test execution results
+ - integrate cypress tests with jenkins CI
+
+ 

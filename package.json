@@ -9,6 +9,9 @@
   "author": "habib",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.3.0"
+    "@cypress/xpath": "^2.0.3",
+    "cypress": "^12.3.0",
+    "cypress-iframe": "^1.0.1",
+    "cypress-xpath": "^2.0.1"
   }
 }

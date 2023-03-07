@@ -7,7 +7,8 @@
 
 describe("My fifth test Suite", function () {
   it("working with web tables", function () {
-    cy.visit("https://rahulshettyacademy.com/AutomationPractice");
+    //cy.visit("https://rahulshettyacademy.com/AutomationPractice");
+    cy.visit(Cypress.env("url") + "/AutomationPractice/");
 
     // get specific web table items by iterating
     cy.get("tr td:nth-child(2)").each(($e1, index, $list) => {

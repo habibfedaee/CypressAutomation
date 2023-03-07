@@ -5,7 +5,8 @@
 describe("My third test suite", function () {
   it("handle alerts in web app", function () {
     // checkboxes:
-    cy.visit("https://rahulshettyacademy.com/AutomationPractice");
+    //cy.visit("https://rahulshettyacademy.com/AutomationPractice");
+    cy.visit(Cypress.env("url") + "/AutomationPractice/");
 
     // alerts
     cy.get("#alertbtn").click();

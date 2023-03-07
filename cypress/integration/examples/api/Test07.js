@@ -6,7 +6,9 @@ describe("working with child window", function () {
     // 1st: by using remove target attribute method
     // 2nd: by grabbing href attribute and using cy.visit() after previous steps
 
-    cy.visit("https://rahulshettyacademy.com/AutomationPratice/");
+    //cy.visit("https://rahulshettyacademy.com/AutomationPratice/");
+    cy.visit(Cypress.env("url") + "/AutomationPractice/");
+
     // to grab an attribute of an element we can use jquery prop() method as following: but
     // cypress will NOT allow us to open another unique domain separate from our current domain
     // --WON'T WORK--, so the link should be a sub domain of the current domain that we are working on.
