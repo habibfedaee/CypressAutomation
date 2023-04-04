@@ -7,6 +7,10 @@ module.exports = defineConfig({
     userId: "hbf",
     password: "pass123",
   },
+  retries: {
+    runMode: 1,
+    //openMode: 0,
+  },
   projectId: "rxv5nv",
   e2e: {
     setupNodeEvents(on, config) {

@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test": "cypress open",
+    "testRunner": "node_modules\\.bin\\cypress run",
+    "headless": "npm run test --headed",
+    "chromeTest": "npm run testRunner --browser chrome",
+    "recordDashBoardTest": "npm run test --record --key keyvalue --reporter mochawesome"
   },
   "author": "habib",
   "license": "ISC",
   "devDependencies": {
     "@cypress/xpath": "^2.0.3",
-    "cypress": "^12.3.0",
+    "cypress": "^12.9.0",
     "cypress-iframe": "^1.0.1",
     "cypress-xpath": "^2.0.1"
   }

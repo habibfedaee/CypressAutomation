@@ -22,7 +22,7 @@ describe("Testing Framework", function () {
     const homePage = new HomePage();
     const productPage = new ProductsPage();
 
-    cy.visit(Cypress.env("url", "/angularpractice/") + "/angularpractice/");
+    cy.visit(Cypress.env("url") + "/angularpractice/");
     //cy.visit("https://rahulshettyacademy.com/angularpractice/");
     // enter name: (using external data)
 

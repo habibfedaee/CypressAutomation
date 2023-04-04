@@ -31,7 +31,7 @@ describe("api testing", function () {
     cy.request("PUT", "https://httpbin.org/put", {
       name: "habib",
       age: 21,
-    }).then((reponse) => {
+    }).then((response) => {
       expect(response.body).to.have.property("json");
       expect(response.body.json).to.deep.equal({ name: "habib", age: 21 });
     });
