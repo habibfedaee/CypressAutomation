@@ -14,7 +14,7 @@
 //
 
 import ProductsPage from "../integration/examples/pageObjects/ProductsPage.js";
-import productsPage from "../integration/examples/pageObjects/ProductsPage.js";
+//import productsPage from "../integration/examples/pageObjects/ProductsPage.js";
 Cypress.Commands.add("selectProduct", (productName) => {
   const productsPage = new ProductsPage();
   cy.get("h4.card-title").each(($el, index, $list) => {
