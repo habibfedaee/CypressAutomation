@@ -1,5 +1,7 @@
 /// <reference types="Cypress" />
 
+//import cypress = require("cypress");
+
 // const cypress = require("cypress");
 
 describe("My third test suite", function () {
@@ -32,11 +34,14 @@ describe("My third test suite", function () {
     // open that link in current window/tab.
     cy.get("#opentab").invoke("removeAttr", "target").click();
 
+    cy.url().should("include", "qaclickacademy.com");
+
     // for navigation use 'cypress.go(direction)'
     // direction : back, forward
-
-    cy.url().should("include", "rahulshettyacademy");
     cy.go("back");
+
+    //cy.pause();
+    cy.url().should("include", "rahulshettyacademy");
 
     // for validation where we are currently, we can use 'cy.url()'
   }); // end of it

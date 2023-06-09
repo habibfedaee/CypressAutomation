@@ -1,0 +1,4 @@
+1. work on creating a common selector for each product amount added to cart
+2. complete the assertion of the total of each product and final total of the cart
+3. add the code to the related part of eCommStepDef.js 
+

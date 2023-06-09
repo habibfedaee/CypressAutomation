@@ -4,6 +4,9 @@ import ProductsPage from "../pageObjects/ProductsPage.js";
 
 require("@cypress/xpath");
 
+const homePage = new HomePage();
+const productPage = new ProductsPage();
+
 describe("Testing Framework", function () {
   let data;
 
@@ -19,8 +22,6 @@ describe("Testing Framework", function () {
 
   it("my first test case", () => {
     // create objects of the POM pages created
-    const homePage = new HomePage();
-    const productPage = new ProductsPage();
 
     cy.visit(Cypress.env("url") + "/angularpractice/");
     //cy.visit("https://rahulshettyacademy.com/angularpractice/");
@@ -69,6 +70,9 @@ describe("Testing Framework", function () {
 
       // assert if the total of items' prices matches with the total given
 
+      var total1 = 0;
+
+      // old code:
       var total = 0;
       cy.get("tr td:nth-child(4) strong")
         .each(($el, index, $list) => {

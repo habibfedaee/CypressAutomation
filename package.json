@@ -17,5 +17,9 @@
     "cypress": "^12.13.0",
     "cypress-iframe": "^1.0.1",
     "cypress-xpath": "^2.0.1"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^17.2.1",
+    "mochawesome": "^7.1.3"
   }
 }

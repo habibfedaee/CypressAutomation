@@ -47,6 +47,11 @@ class ProductsPage {
   getTotalAmount() {
     return cy.get(".text-right h3 strong");
   }
+
+  // total amount of each product ------- NEEDS TO CREATE AN OBJECT THAT RETURNS MULTIPLE AMOUNTS---
+  getTotalProduct() {
+    return cy.get("tr td:nth-child(4) strong"); // might not work
+  }
 }
 
 export default ProductsPage;
