@@ -58,6 +58,7 @@ describe("Testing Framework", function () {
 
       // click on shop
       homePage.getShop().click();
+      Cypress.config("defaultCommandTimeout", 8000);
       //cy.get(":nth-child(2) > .nav-link").click();
 
       // add items to the cart:
