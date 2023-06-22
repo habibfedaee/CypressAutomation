@@ -1,0 +1,24 @@
+1. create a folder <project_name>
+2. change dir to the folder
+3. open the directory inside terminal
+4. run npm init to create package.JSON
+5. run the following commands to install cypress:
+    5.1 npm install cypress --save-dev
+    5.2 npm install @badeball/cypress-cucumber-preprocessor
+    5.3 npm install @cypress/browserify-preprocessor
+    5.4 ...
+6. install any other packages or modules required for your framework:
+    6.1 xpath
+    6.2 cypress iframe
+    6.3 other things if required ...
+7. run 'npx cypress open' --> shows if you're running the framework for the first timers
+8. complete the cypress dashboard open --> choose End-to-End testing --> choose browser --> create Specs 
+9. create PageObject Structure, folders and required commands 
+10. create a feature file (using scenario, given, when, and , then)
+11. create the step definition file
+12. before running your test-case make sure do the following:
+ 12.1 set the env settings (url, username, password),
+ 12.2 set specPattern
+ 12.3 ... 
+
+
