@@ -71,29 +71,31 @@ describe("Testing Framework", function () {
 
       // assert if the total of items' prices matches with the total given
 
-      var total1 = 0;
 
       // old code:
-      var total = 0;
+      var grandTotal=0;
+
       cy.get("tr td:nth-child(4) strong")
         .each(($el, index, $list) => {
           const amount = $el.text();
-
           var res = amount.split(" ");
           res = res[1].trim();
-          total = Number(total) + Number(res);
+          grandTotal = Number(grandTotal) + Number(res);
           cy.log(res);
         })
         .then(() => {
-          cy.log(total);
+          cy.log(grandTotal);
           // assert if var total is equal to total from productsPage
           productPage.getTotalAmount().then((element) => {
             var totalItems = element.text();
             var result = totalItems.split(" ");
             totalItems = result[1].trim();
-            expect(Number(totalItems)).to.be.equal(total);
+            expect(Number(totalItems)).to.be.equal(Number(grandTotal));
           });
         });
+
+
+
 
       // enter country name into
       productPage.getFinalCheckout().click();

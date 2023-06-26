@@ -49,8 +49,25 @@ class ProductsPage {
   }
 
   // total amount of each product ------- NEEDS TO CREATE AN OBJECT THAT RETURNS MULTIPLE AMOUNTS---
-  getTotalProduct() {
-    return cy.get("tr td:nth-child(4) strong"); // might not work
+  getTotalEachProduct() {
+    return cy.get("tr td:nth-child(4) strong"); // returns a webEL; can't be iterated using .each()
+  }
+
+  // country input
+  getCountry(){
+    return cy.get('#country');
+  }
+  
+  getAgreeCheckbox(){
+    return cy.get('#checkbox2');
+  }
+
+  getPurchaseButton(){
+    return cy.get("input[value='Purchase']")
+  }
+
+  getSuccessMessage(){
+    return cy.get("div[class='alert alert-success alert-dismissible'] strong");
   }
 }
 
